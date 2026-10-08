@@ -100,7 +100,24 @@ Hello, Taro
 **以下は受講者が記入してください**
 
 - 追加で確認した入力例：
+
+① `python -m day01.app --name "Taro" --repeat 10`
+
+② `python -m day01.app --name "Taro" --repeat 11`
+
+③ `python -m day01.app --name "Taro" --repeat 0`
+
+④ `python -m day01.app --name "Taro" --format xml`
+
+⑤ `python -m day01.app --name "山田 太郎&%$" --repeat 2 --format json`
+
 - 発生したエラーと対処：
+
+② `ERROR --repeat must be between 1 and 10 --repeat must be between 1 and 10`
+
+③ `ERROR --repeat must be between 1 and 10 --repeat must be between 1 and 10`
+
+④ `usage: day01 [-h] --name NAME [--repeat REPEAT] [--format {text,json}] day01: error: argument --format: invalid choice: 'xml' (choose from 'text', 'json')`
 
 ## 提出物
 
