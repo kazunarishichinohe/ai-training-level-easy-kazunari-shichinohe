@@ -133,14 +133,14 @@ python -m day02.app --prompt "短い俳句を作ってください" --temperatur
 
 ## Bedrock確認
 
-- モデル：
-- リージョン：
-- 主要パラメータ：
+- モデル：Claude 3.5 Sonnet v2
+- リージョン：ap-northeast-1
+- 主要パラメータ：temperature 0.2、max-tokens 512、timeout-sec 30秒
 
 ## リサーチメモ（任意）
 
 調べたURLや、理解した要点をメモしてください。
 
-- Bedrockのモデル呼び出し方法（boto3等）
-- 利用する認証方式（研修の指示に従う）
-- タイムアウト/リトライの考え方
+- Bedrockのモデル呼び出し方法（boto3等）：boto3の bedrock-runtime クライアントから converse() を呼び出し、レスポンスの回答本文を取り出す。
+- 利用する認証方式（研修の指示に従う）：IAMユーザーのアクセスキーを「~/.aws/credentials」の「training」に登録し、「AWS_PROFILE=training」で指定。
+- タイムアウト/リトライの考え方：接続・読み取りタイムアウトをそれぞれ設定。
